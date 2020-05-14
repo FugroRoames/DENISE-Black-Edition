@@ -12,3 +12,5 @@ COPY ./ ./
 RUN cd libcseife && make
 
 RUN cd src && make denise
+
+CMD make test
