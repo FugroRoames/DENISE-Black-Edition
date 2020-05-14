@@ -31,12 +31,12 @@ void readmod_AC(float  **  rho, float **  pi){
 	   fprintf(FP,"\t Vp:\n\t %s.vp\n\n",MFILE);
 	   sprintf(filename,"%s.vp",MFILE);
 	   fp_vp=fopen(filename,"r");
-	   if (fp_vp==NULL) err(" Could not open model file for Vp ! ");
+	   if (fp_vp==NULL) errf(" Could not open model file '%s' for Vp ! ", filename);
 
 	   fprintf(FP,"\t Density:\n\t %s.rho\n\n",MFILE);
 	   sprintf(filename,"%s.rho",MFILE);
 	   fp_rho=fopen(filename,"r");
-	   if (fp_rho==NULL) err(" Could not open model file for densities ! ");
+	   if (fp_rho==NULL) errf(" Could not open model file '%s' for densities ! ", filename);
         }
 	   
 	/* read density and Lame parameters */
@@ -45,12 +45,12 @@ void readmod_AC(float  **  rho, float **  pi){
 	   fprintf(FP,"\t Lame parameter lambda:\n\t %s.lam\n\n",MFILE);
 	   sprintf(filename,"%s.lam",MFILE);
 	   fp_vp=fopen(filename,"r");
-	   if (fp_vp==NULL) err(" Could not open model file for Lame parameter lambda ! ");
+	   if (fp_vp==NULL) errf(" Could not open model file '%s' for Lame parameter lambda ! ", filename);
 
 	   fprintf(FP,"\t Density:\n\t %s.rho\n\n",MFILE);
 	   sprintf(filename,"%s.rho",MFILE);
 	   fp_rho=fopen(filename,"r");
-	   if (fp_rho==NULL) err(" Could not open model file for densities ! ");
+	   if (fp_rho==NULL) errf(" Could not open model file '%s' for densities ! ", filename);
         }
 	   
 
