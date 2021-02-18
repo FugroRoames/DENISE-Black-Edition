@@ -16,6 +16,20 @@ void err(char err_text[]){
         exit(1);
 }
 
+void errf(char err_template[], char filename[]){
+        extern int MYID;
+		char error_message[STRING_SIZE];
+		sprintf(error_message, err_template, filename);
+
+        fprintf(stdout,"Message from PE %d\n",MYID);
+        fprintf(stdout,"R U N - T I M E  E R R O R: \n");
+        fprintf(stdout,"%s\n", error_message);
+        fprintf(stdout,"...now exiting to system.\n");
+
+        MPI_Abort(MPI_COMM_WORLD, 1);
+        exit(1);
+}
+
 void warning(char warn_text[]){
 	/* standard warnings handler */
 	fprintf(stdout,"W A R N I N G   M E S S A G E: \n");

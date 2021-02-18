@@ -10,7 +10,7 @@
 #SBATCH --output=JOB.%j.out
 #SBATCH --exclusive
 
-/usr/bin/time mpirun -n 1 ../bin/denise DENISE_marm_OBC.inp FWI_workflow_marmousi.inp
+/usr/bin/time mpirun --allow-run-as-root -n 1 ../bin/denise DENISE_marm_OBC.inp FWI_workflow_marmousi.inp
 
 #mpirun -n 1 nvprof -o resultNV.nvprof --cpu-profiling on ../bin/denise DENISE_marm_OBC.inp FWI_workflow_marmousi.inp | tee profiling_CPU.txt
 

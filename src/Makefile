@@ -22,9 +22,9 @@ EXEC= ../bin
 # CC=cc
 
 # On Linux NEC-cluster with Intel-MPI
-CC=mpiicc
-LFLAGS=-lm -lcseife -lfftw3 -ftz -lstdc++
-CFLAGS=-O3 -xAVX -ipo -fno-fnalias -restrict
+CC=mpicc
+LFLAGS=-lm -lcseife -lfftw3 #-ftz -lstdc++ ## These options seem to be Intel (compiler) specific
+CFLAGS=#-O3 -xAVX -ipo -fno-fnalias -restrict ## These options seem to be Intel (compiler) specific; not needed for a proof of concept
 SFLAGS=-L./../libcseife -L$//sfs/fs2/work-sh2/sungw331/fftw-3.3.4/lib
 IFLAGS=-I./../libcseife -I$//sfs/fs2/work-sh2/sungw331/fftw-3.3.4/include -I./../include
 

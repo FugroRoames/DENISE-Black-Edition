@@ -1,0 +1,3 @@
+[submodule "DENISE-Benchmark"]
+	path = DENISE-Benchmark
+	url = git@github.com:daniel-koehn/DENISE-Benchmark.git

@@ -1,0 +1,4 @@
+.git/
+Dockerfile
+DENISE-Benchmark/
+!DENISE-Benchmark/Marmousi-II/start/

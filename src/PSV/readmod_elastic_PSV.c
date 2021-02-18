@@ -33,18 +33,18 @@ void readmod_elastic_PSV(float  **  rho, float **  pi, float **  u){
 	   fprintf(FP,"\t Vp:\n\t %s.vp\n\n",MFILE);
 	   sprintf(filename,"%s.vp",MFILE);
 	   fp_vp=fopen(filename,"r");
-	   if (fp_vp==NULL) err(" Could not open model file for Vp ! ");
+	   if (fp_vp==NULL) errf(" Could not open model file '%s' for Vp ! ", filename);
 
 
 	   fprintf(FP,"\t Vs:\n\t %s.vs\n\n",MFILE);
 	   sprintf(filename,"%s.vs",MFILE);
 	   fp_vs=fopen(filename,"r");
-	   if (fp_vs==NULL) err(" Could not open model file for Vs ! ");
+	   if (fp_vs==NULL) errf(" Could not open model file '%s' for Vs ! ", filename);
 
 	   fprintf(FP,"\t Density:\n\t %s.rho\n\n",MFILE);
 	   sprintf(filename,"%s.rho",MFILE);
 	   fp_rho=fopen(filename,"r");
-	   if (fp_rho==NULL) err(" Could not open model file for densities ! ");
+	   if (fp_rho==NULL) errf(" Could not open model file '%s' for densities ! ", filename);
            }
 	   
 	   /* read density and Lame parameters */
@@ -53,18 +53,18 @@ void readmod_elastic_PSV(float  **  rho, float **  pi, float **  u){
 	   fprintf(FP,"\t Lame parameter lambda:\n\t %s.lam\n\n",MFILE);
 	   sprintf(filename,"%s.lam",MFILE);
 	   fp_vp=fopen(filename,"r");
-	   if (fp_vp==NULL) err(" Could not open model file for Lame parameter lambda ! ");
+	   if (fp_vp==NULL) errf(" Could not open model file '%s' for Lame parameter lambda ! ", filename);
 
 
 	   fprintf(FP,"\t Lame parameter mu:\n\t %s.vs\n\n",MFILE);
 	   sprintf(filename,"%s.mu",MFILE);
 	   fp_vs=fopen(filename,"r");
-	   if (fp_vs==NULL) err(" Could not open model file for Lame parameter mu ! ");
+	   if (fp_vs==NULL) errf(" Could not open model file '%s' for Lame parameter mu ! ", filename);
 
 	   fprintf(FP,"\t Density:\n\t %s.rho\n\n",MFILE);
 	   sprintf(filename,"%s.rho",MFILE);
 	   fp_rho=fopen(filename,"r");
-	   if (fp_rho==NULL) err(" Could not open model file for densities ! ");
+	   if (fp_rho==NULL) errf(" Could not open model file '%s' for densities ! ", filename);
            }
 	   
 
